@@ -226,6 +226,12 @@ public class NextDate {
         if (tanggal + n <= hari) {
             tanggalN = tanggal + n;
             System.out.println("Tanggal N : " + tanggalN + " " + namaBulan + " " + tahun );
+        } else if (bulan == 12) {
+            tanggalN = (tanggal + n) % hari;
+            bulanN = bulan + (tanggal + n)/hari;
+            tahunBaru = tahun + 1;
+            namaBulan = "Januari";
+            System.out.println(tanggal + " hari lagi tanggal : " + tanggalN + " " + namaBulan + " " + tahunBaru );
         } else {
             tanggalN = (tanggal + n) % hari;
             bulanN = bulan + (tanggal + n)/hari;
