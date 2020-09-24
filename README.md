@@ -1,2 +1,2 @@
 # implementasi-algoritma
-buat nyimpen tugas implementasi algoritma
+Tempat menyimpan tugas implementasi algoritma
