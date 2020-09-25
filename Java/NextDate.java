@@ -262,7 +262,7 @@ public class NextDate {
             } else if (bulanN == 12) {
                 namaBulan = "Desember";
             }
-            System.out.println(tanggal + " hari lagi tanggal : " + tanggalN + " " + namaBulan + " " + tahun );
+            System.out.println(n + " hari lagi tanggal : " + tanggalN + " " + namaBulan + " " + tahun );
         }
     }
 }
