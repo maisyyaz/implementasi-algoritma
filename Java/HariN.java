@@ -5,9 +5,10 @@ public class HariN {
         // deklarasi variabel
         int hari, n, besok, hariN;
         String namaHari = "";
-        
+        Scanner input;
+
         // buat inputan pake scanner
-        Scanner input = new Scanner(System.in);
+        input = new Scanner(System.in);
 
         // input hari dari user
         System.out.print("Sekarang hari : ");
@@ -51,7 +52,7 @@ public class HariN {
                 namaHari = "Kamis";
             } else if (besok == 5) {
                 namaHari = "Jumat";
-            }else if (besok == 6) {
+            } else if (besok == 6) {
                 namaHari = "Sabtu";
             } else if (besok == 7) {
                 namaHari = "Minggu";
@@ -59,13 +60,34 @@ public class HariN {
             // cetak
             System.out.println("Besok adalah hari " + namaHari);
         } else if (hari + 1 > 7) {
-            namaHari = "senin";
+            namaHari = "Senin";
             // cetak
             System.out.println("Besok adalah hari " + namaHari);          
         }
 
         // aritmatika hari ke N
-        if (hari + n <= 7) {
+        if (hari % 7 == 0) {
+            hariN = hari;
+            //  percabangan nama hari
+            if (hariN == 1) {
+                namaHari = "Senin";
+            } else if (hariN == 2) {
+                namaHari = "Selasa";
+            } else if (hariN == 3) {
+                namaHari = "Rabu";
+            } else if (hariN == 4) {
+                namaHari = "Kamis";
+            } else if (hariN == 5) {
+                namaHari = "Jumat";
+            } else if (hariN == 6) {
+                namaHari = "Sabtu";
+            } else if (hariN == 7) {
+                namaHari = "Minggu";
+            }
+            // cetak
+            System.out.println(n + " hari kedepan adalah hari " + namaHari);
+        }else{
+            if (hari + n <= 7) {
             hariN = hari + n;
             //  percabangan nama hari
             if (hariN == 1) {
@@ -78,33 +100,34 @@ public class HariN {
                 namaHari = "Kamis";
             } else if (hariN == 5) {
                 namaHari = "Jumat";
-            }else if (hariN == 6) {
+            } else if (hariN == 6) {
                 namaHari = "Sabtu";
             } else if (hariN == 7) {
                 namaHari = "Minggu";
             }
             // cetak
             System.out.println(n + " hari kedepan adalah hari " + namaHari);
-        } else if (hari + n > 7) {
-            hariN = (hari + n) % 7;
-            // percabangan nama hari
-            if (hariN == 1) {
-                namaHari = "Senin";
-            } else if (hariN == 2) {
-                namaHari = "Selasa";
-            } else if (hariN == 3) {
-                namaHari = "Rabu";
-            } else if (hariN == 4) {
-                namaHari = "Kamis";
-            } else if (hariN == 5) {
-                namaHari = "Jumat";
-            }else if (hariN == 6) {
-                namaHari = "Sabtu";
-            } else if (hariN == 7) {
-                namaHari = "Minggu";
+            } else if (hari + n > 7) {
+                hariN = (hari + n + 1) % 7;
+                // percabangan nama hari
+                if (hariN == 1) {
+                    namaHari = "Senin";
+                } else if (hariN == 2) {
+                    namaHari = "Selasa";
+                } else if (hariN == 3) {
+                    namaHari = "Rabu";
+                } else if (hariN == 4) {
+                    namaHari = "Kamis";
+                } else if (hariN == 5) {
+                    namaHari = "Jumat";
+                } else if (hariN == 6) {
+                    namaHari = "Sabtu";
+                } else if (hariN == 7) {
+                    namaHari = "Minggu";
+                }
+                // cetak
+                System.out.println(n + " hari kedepan adalah hari " + namaHari);
             }
-            // cetak
-            System.out.println(n + " hari kedepan adalah hari " + namaHari);
         }
     }
 }
