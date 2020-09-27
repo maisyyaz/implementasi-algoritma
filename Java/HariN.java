@@ -31,7 +31,7 @@ public class HariN {
             namaHari = "Jumat";
         } else if (hari == 6) {
             namaHari = "Sabtu";
-        } else if (hari == 7) {
+        } else if (hari == 0) {
             namaHari = "Minggu";
         }
 
