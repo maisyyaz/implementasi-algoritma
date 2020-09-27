@@ -108,7 +108,7 @@ public class HariN {
             // cetak
             System.out.println(n + " hari kedepan adalah hari " + namaHari);
             } else if (hari + n > 7) {
-                hariN = (hari + n + 1) % 7;
+                hariN = (hari + n) % 7;
                 // percabangan nama hari
                 if (hariN == 1) {
                     namaHari = "Senin";
