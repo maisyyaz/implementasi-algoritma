@@ -122,7 +122,7 @@ public class HariN {
                     namaHari = "Jumat";
                 } else if (hariN == 6) {
                     namaHari = "Sabtu";
-                } else if (hariN == 7) {
+                } else if (hariN == 0) {
                     namaHari = "Minggu";
                 }
                 // cetak
